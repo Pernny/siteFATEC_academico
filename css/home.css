@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background: linear-gradient(#fff, #434343);
+}
+.container {
+  background: #fff;
+  height: 60vw;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+header {
+  background: #fff;
+  width: 100%;
+  height: 10vw;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-flow: wrap;
+}
+header .imagem1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 20px;
+}
+
+header .imagem1 img {
+  height: 10vh;
+}
+
+header .imagem2 {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+}
+header .imagem2 img {
+  height: 10vh;
+}
+
+nav {
+  background: #000000;
+  height: 80px;
+  width: 100%;
+  text-align: center;
+  position: static;
+  z-index: 999;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  margin-top: 40px;
+}
+.card {
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+  padding: 30px;
+  margin: 20px;
+  width: 400px;
+  transition: all 0.3s ease-out;
+}
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.card p {
+  color: #a3a5ae;
+  font-size: 16px;
+}
+.image {
+  max-width: 150px;
+  max-height: 150px;
+}
+.verde {
+  border-left: 3px solid #19a130;
+}
+.vermelho {
+  border-left: 3px solid #ed1414;
+}
+.azul {
+  border-left: 3px solid #26f3f6;
+}
+.amarelo {
+  border-left: 3px solid #edf10e;
+}
+footer {
+  position: relative;
+  margin-top: 40px;
+  bottom: 0;
+  background-color: blue;
+  background-image: url("/img/rodapé.webp");
+  background-size: contain;
+  background-position: center;
+  color: #fff;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  margin-top: 30px;
+  height: 50px;
+}
+@media (max-width: 1200px) {
+  .row {
+    flex-direction: column;
+  }
+  header .imagem1 {
+    display: none;
+  }
+  header .imagem2 {
+    display: none;
+  }
+  .container {
+    height: 150vw;
+  }
+}
+main {
+  display: flex;
+  align-items: center;
+}
+main .imagem {
+  margin-left: 20px;
+}
+main .conteudo {
+  text-align: justify;
+  margin-right: 20px;
+  padding-left: 10%;
+}
+.imagem img {
+  max-width: 150px;
+  max-height: 150px;
+}
+.animation-img {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  /* outras propriedades de estilo que você queira aplicar */
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
